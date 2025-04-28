@@ -98,7 +98,7 @@ export default {
         v-if="configItem.type === 'frame' && configItem.url"
         :id="getFrameId(index)"
         :src="configItem.url"
-        :allow="`clipboard-write ${configItem.url}`"
+        :allow="`clipboard-write ${configItem.url}; clipboard-read ${configItem.url}`"
         @load="() => onIframeLoad(index)"
       />
     </div>
